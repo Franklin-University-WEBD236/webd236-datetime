@@ -1,10 +1,14 @@
 <?php
 include_once "include/util.php";
-/*
+
 function get_view($zone) {
   if (!$zone) {
     $zone = date_default_timezone_get();
+  } else {
+    $zone = preg_replace('/\-/', '/', $zone);
   }
+  
+  date_default_timezone_set($zone);
   renderTemplate(
     "views/index.php",
     array(
@@ -13,5 +17,4 @@ function get_view($zone) {
     )
   );
 }
-*/
 ?>

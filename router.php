@@ -17,8 +17,6 @@ function routeUrl() {
   $func = strtolower($method) . '_' . (isset($entity[1]) ? $entity[1] : 'index');
   $params = array_slice($entity, 2);
 
-    print_r($params);
-
   if (!file_exists($controller)) {
     die("Controller '$controller' doesn't exist.");
   }
