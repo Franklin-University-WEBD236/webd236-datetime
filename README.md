@@ -1,3 +1,3 @@
-# WEBD 236 markdown example
+# WEBD 236 dates and times
 
-An example of using markdown for rich text formatting without injection vulnerabilities.
+Examples of date manipulation and timezones
