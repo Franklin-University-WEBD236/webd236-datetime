@@ -11,7 +11,7 @@
               <label for="timezone">Select new timezone</label>
               <select name="timezone" id="timezone" class="form-control">
 [[ foreach ($timezones as $zone => $text): ]]                
-                <option value="{{ str_replace('/', '-', $zone) }}" [[ echo ]]>{{$text}}</option>
+                <option value="{{ str_replace('/', '-', $zone) }}" {{{ $zone == $current_zone ? 'selected="selected"' : ""}}}>{{$text}}</option>
 [[ endforeach; ]]
               </select>
             </div>
