@@ -8,7 +8,7 @@ function get_view($zone) {
   if (!$zone) {
     $zone = date_default_timezone_get();
   } else {
-    $zone = preg_replace('/\-/', '/', $zone);
+    $zone = str_replace('-', '/',  $zone);
   }
   
   date_default_timezone_set($zone);
@@ -20,5 +20,10 @@ function get_view($zone) {
       'timezones' => $timezones
     )
   );
+}
+
+function post_view() {
+  $zone = safeParam($_POST, 'timezone', date_default_timezone_get());
+  redirect("/timezone/view/$zone");
 }
 ?>

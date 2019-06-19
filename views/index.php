@@ -5,13 +5,13 @@
     <h1>Current server time</h1>
     <p>{{ date('l jS \of F Y h:i:s A') }} in {{ $current_zone }}</p>
 
-          <form action="@@process/contact@@" method="post">
+          <form action="@@timezone/view@@" method="post">
           <div class="form-row">
             <div class="col">
               <label for="timezone">Select new timezone</label>
               <select name="timezone" id="timezone" class="form-control">
 [[ foreach ($timezones as $zone => $text): ]]                
-                <option value="{{ str_replace('/', '-', $zone) }}">{{$text}}</option>
+                <option value="{{ str_replace('/', '-', $zone) }}" [[ echo ]]>{{$text}}</option>
 [[ endforeach; ]]
               </select>
             </div>

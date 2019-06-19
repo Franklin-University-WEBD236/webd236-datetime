@@ -64,13 +64,13 @@
     <h1>Current server time</h1>
     <p><?php echo(htmlentities( date('l jS \of F Y h:i:s A') )); ?> in <?php echo(htmlentities( $current_zone )); ?></p>
 
-          <form action="/process/contact" method="post">
+          <form action="/timezone/view" method="post">
           <div class="form-row">
             <div class="col">
               <label for="timezone">Select new timezone</label>
               <select name="timezone" id="timezone" class="form-control">
 <?php  foreach ($timezones as $zone => $text): ?>                
-                <option value="<?php echo(htmlentities( str_replace('/', '-', $zone) )); ?>"><?php echo(htmlentities($text)); ?></option>
+                <option value="<?php echo(htmlentities( str_replace('/', '-', $zone) )); ?>" <?php   ?>><?php echo(htmlentities($text)); ?></option>
 <?php  endforeach; ?>
               </select>
             </div>
