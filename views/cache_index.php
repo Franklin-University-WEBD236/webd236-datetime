@@ -63,8 +63,13 @@
 <div class="row">
   <div class="col-lg-12">
     <h1>Current server time</h1>
-    <p><?php echo(htmlentities( date('l jS \of F Y h:i:s A') )); ?> in <?php echo(htmlentities( $zone )); ?></p>
+    <p><?php echo(htmlentities( date('l jS \of F Y h:i:s A') )); ?> in <?php echo(htmlentities( $current_zone )); ?></p>
 
+    <form>
+      <select name="current_zone">
+        <option>Foo</option>
+      </select>
+    </form>
     </div>
     <footer class="footer">
       <div class="container">

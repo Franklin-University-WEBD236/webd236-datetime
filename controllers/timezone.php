@@ -1,7 +1,10 @@
 <?php
 include_once "include/util.php";
+include_once "include/timezones.php";
 
 function get_view($zone) {
+  global $timezones;
+  
   if (!$zone) {
     $zone = date_default_timezone_get();
   } else {
@@ -13,7 +16,8 @@ function get_view($zone) {
     "views/index.php",
     array(
       'title' => 'PHP Timezones',
-      'zone' => $zone
+      'current_zone' => $zone,
+      'timezones' => $timezones
     )
   );
 }
