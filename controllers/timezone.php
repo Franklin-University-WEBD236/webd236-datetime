@@ -1,6 +1,6 @@
 <?php
 include_once "include/util.php";
-
+/*
 function get_view($zone) {
   if (!$zone) {
     $zone = date_default_timezone_get();
@@ -13,4 +13,5 @@ function get_view($zone) {
     )
   );
 }
+*/
 ?>
